@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
+*{
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+body{
+  background: url(../img/back.jpg) no-repeat center;
+  background-attachment: fixed;
+}
+button{
+  cursor: pointer;
+}
+.header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.container-fluid, app{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.header__title{
+  font-size: 1.5em;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: rgb(54, 55, 56);
+}
+.header__title_h2{
+  font-weight: 500;
+  font-size: 1.2em;
+}
+.main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex: 1;
+}
+
+todo-item, todo-form{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+.material-icons{
+  cursor: pointer
+}
+/*Footer*/

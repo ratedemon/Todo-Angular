@@ -1,0 +1,14 @@
+<footer class="footer">
+  <button class="footer__add" (click)="show()">
+    <i class="material-icons">add</i>
+    Add TODO List
+  </button>
+  <form action="#" class="footer__form" [ngClass]="{action: showing}">
+    <div class="form__action">
+      <input type="text" class="action__input">
+      <button type="submit" class="action__submit">Add Title</button>
+    </div>
+    <i class="material-icons clear" (click)="show()">clear</i>
+  </form>
+  <span>&copy; RubyGarage</span>
+</footer>

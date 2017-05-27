@@ -1,0 +1,26 @@
+<ul class="main">
+  <li class="main__list" *ngFor="let item of items">
+    <div class="list__head">
+      <i class="material-icons date">date_range</i>
+      <input type="text" class="head__input" disabled value="{{item.title}}">
+      <i class="material-icons rewrite">create</i>
+      <i class="material-icons delete">delete</i>
+    </div>
+    <form class="list__form" action="#">
+      <i class="material-icons">add</i>
+      <input type="text" placeholder="Start typing here to create a task..." class="form__input">
+      <button type="submit" class="form__submit">Add Task</button>
+    </form>
+    <ul class="list__todos">
+      <li class="todos__task" *ngFor="let task of item.arrayTasks">
+        <i class="material-icons checkbox">{{task.done?'check_box':'check_box_outline_blank'}}</i>
+        <input type="text" class="task__title" value="{{task.text}}" disabled [ngClass]="{done: task.done}">
+        <div class="task__interaction">
+          <i class="material-icons">swap_vert</i>
+          <i class="material-icons">create</i>
+          <i class="material-icons">delete</i>
+        </div>
+      </li>
+    </ul>
+  </li>
+</ul>
