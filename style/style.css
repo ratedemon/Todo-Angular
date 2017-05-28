@@ -38,7 +38,7 @@ button{
 .main{
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   width: 100%;
   flex: 1;
@@ -51,6 +51,7 @@ todo-item, todo-form{
   align-items: center
 }
 .material-icons{
-  cursor: pointer
+  cursor: pointer;
+  user-select: none;
 }
 /*Footer*/

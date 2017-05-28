@@ -5,14 +5,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
+var data_service_1 = require("../shared/data.service");
+var item_1 = require("../shared/item");
 var TodoFormComponent = (function () {
-    function TodoFormComponent() {
+    function TodoFormComponent(dataService) {
+        this.dataService = dataService;
+        this.items = [];
         this.showing = false;
     }
     TodoFormComponent.prototype.show = function () {
         this.showing = !this.showing;
+    };
+    TodoFormComponent.prototype.ngOnInit = function () {
+        this.items = this.dataService.getItems();
+    };
+    TodoFormComponent.prototype.addTitle = function (name, input) {
+        var variable = new item_1.Item(name, []);
+        this.items.push(variable);
+        this.show();
+        input.value = null;
     };
     return TodoFormComponent;
 }());
@@ -22,7 +38,8 @@ TodoFormComponent = __decorate([
         selector: 'todo-form',
         templateUrl: './todo-form.component.html',
         styleUrls: ["./todo-form.component.css"]
-    })
+    }),
+    __metadata("design:paramtypes", [data_service_1.DataService])
 ], TodoFormComponent);
 exports.TodoFormComponent = TodoFormComponent;
 //# sourceMappingURL=todo-form.component.js.map

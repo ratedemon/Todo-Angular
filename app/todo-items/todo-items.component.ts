@@ -1,7 +1,9 @@
 import {Component, OnInit} from '@angular/core';
+import {NgForm, NgModel} from '@angular/forms';
 import {DataService} from '../shared/data.service';
 import {Item} from '../shared/item';
 import {Task} from '../shared/task';
+import {TodoTasksComponent} from '../todo-tasks/todo-tasks.component';
 
 @Component({
   moduleId: module.id,
@@ -14,6 +16,15 @@ export class TodoItemsComponent implements OnInit{
   constructor(private dataService: DataService){}
   ngOnInit(){
     this.items = this.dataService.getItems();
-    console.log(this.items);
+  }
+  onRemove(todo){
+    this.dataService.removeItem(todo);
+  }
+  addTask(task: string, input: HTMLInputElement, item){
+    let name = new Task(task);
+    let indexTodo = this.items.indexOf(item);
+    // console.log(indexTodo);
+    this.dataService.addTask(indexTodo, name);
+    input.value = null;
   }
 }

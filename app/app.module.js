@@ -10,6 +10,8 @@ var core_1 = require("@angular/core");
 var app_component_1 = require("./app.component");
 var todo_form_component_1 = require("./todo-form/todo-form.component");
 var todo_items_component_1 = require("./todo-items/todo-items.component");
+var todo_tasks_component_1 = require("./todo-tasks/todo-tasks.component");
+var todo_items_form_component_1 = require("./todo-items-form/todo-items-form.component");
 var platform_browser_1 = require("@angular/platform-browser");
 var forms_1 = require("@angular/forms");
 var data_service_1 = require("./shared/data.service");
@@ -21,7 +23,7 @@ var AppModule = (function () {
 AppModule = __decorate([
     core_1.NgModule({
         imports: [platform_browser_1.BrowserModule, forms_1.FormsModule],
-        declarations: [app_component_1.AppComponent, todo_form_component_1.TodoFormComponent, todo_items_component_1.TodoItemsComponent],
+        declarations: [app_component_1.AppComponent, todo_form_component_1.TodoFormComponent, todo_items_component_1.TodoItemsComponent, todo_tasks_component_1.TodoTasksComponent, todo_items_form_component_1.TodoItemsFormComponent],
         providers: [data_service_1.DataService],
         bootstrap: [app_component_1.AppComponent]
     })

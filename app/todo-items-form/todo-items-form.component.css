@@ -1,0 +1,38 @@
+.list__form{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: stretch;
+  background: lightgray;
+  padding: .15em .2em .15em 0;
+}
+.list__form .material-icons{
+  color: forestgreen;
+  font-weight: bold;
+  font-size: 2em;
+  cursor: default;
+  width: 5%;
+}
+.list__form .form__input{
+  font-size: 1em;
+  padding: 0.1em .2em;
+  /*flex: 1;*/
+  width: 80%;
+  border: 1px solid white;
+}
+.list__form .form__submit{
+  font-size: 1em;
+  padding: .1em .4em;
+  border-radius: 0 .3em .3em 0;
+  background: #359942;
+  border: 1px solid green;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  width: 15%;
+  transition: all .25s ease;
+}
+.list__form .form__submit:focus,.list__form .form__submit:hover{
+  outline: none;
+  background: #44c455;
+}

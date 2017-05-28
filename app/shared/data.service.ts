@@ -9,4 +9,14 @@ export class DataService{
   addItems(name: string, array: Task[]){
     this.items.push(new Item(name, array));
   }
+  removeItem(todo: Item){
+    const num = this.items.indexOf(todo);
+    this.items.splice(num,1);
+  }
+  toggleTask(index1, index2){
+    this.items[index1].arrayTasks[index2].done = !this.items[index1].arrayTasks[index2].done;
+  }
+  addTask(index, task){
+    this.items[index].arrayTasks.push(task);
+  }
 }

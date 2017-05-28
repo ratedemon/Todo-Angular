@@ -11,6 +11,16 @@ var DataService = (function () {
     DataService.prototype.addItems = function (name, array) {
         this.items.push(new item_1.Item(name, array));
     };
+    DataService.prototype.removeItem = function (todo) {
+        var num = this.items.indexOf(todo);
+        this.items.splice(num, 1);
+    };
+    DataService.prototype.toggleTask = function (index1, index2) {
+        this.items[index1].arrayTasks[index2].done = !this.items[index1].arrayTasks[index2].done;
+    };
+    DataService.prototype.addTask = function (index, task) {
+        this.items[index].arrayTasks.push(task);
+    };
     return DataService;
 }());
 exports.DataService = DataService;

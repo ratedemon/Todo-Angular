@@ -4,7 +4,9 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: stretch;
-  width: 80%;
+  width: 60%;
+  margin-bottom: 5%;
+  animation: born .4s ease;
 }
 .list__head{
   display: flex;
@@ -150,4 +152,12 @@
 .task__interaction > *:last-child{
   border-left: 1px solid lightgray;
   margin-right: 15%;
+}
+@keyframes born{
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
 }

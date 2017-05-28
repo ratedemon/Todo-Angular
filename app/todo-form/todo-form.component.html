@@ -3,10 +3,10 @@
     <i class="material-icons">add</i>
     Add TODO List
   </button>
-  <form action="#" class="footer__form" [ngClass]="{action: showing}">
+  <form #myForm="ngForm" novalidate class="footer__form" [ngClass]="{action: showing}">
     <div class="form__action">
-      <input type="text" class="action__input">
-      <button type="submit" class="action__submit">Add Title</button>
+      <input type="text" class="action__input" name="name" [(ngModel)]="title" #userText placeholder="Add Your Task Title">
+      <button type="submit" class="action__submit" (click)="addTitle(title, userText)">Add Title</button>
     </div>
     <i class="material-icons clear" (click)="show()">clear</i>
   </form>
