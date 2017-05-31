@@ -2,13 +2,18 @@
   <li class="main__list" *ngFor="let item of items; let i= index">
     <div class="list__head">
       <i class="material-icons date">date_range</i>
-      <input type="text" class="head__input" disabled value="{{item.title}}">
-      <i class="material-icons rewrite">create</i>
+      <input type="text" class="head__input" [attr.disabled]="el?null:'disabled'" value="{{item.title}}" #inputElement>
+      <i class="material-icons rewrite" (click)="onRewrite(item, inputElement)">{{el?'done':'create'}}</i>
       <i class="material-icons delete" (click)="onRemove(item)">delete</i>
     </div>
-      <todo-items-form [item]="item" [items]="items"></todo-items-form>
+    <todo-items-form [item]="item" [items]="items"></todo-items-form>
     <ul class="list__todos">
-      <todo-task [item]="item"></todo-task>
+      <li class="todos__task" *ngFor="let task of item.arrayTasks">
+        <todo-task [item]="item" [task]="task" [items]="items"></todo-task>
+      </li>
     </ul>
   </li>
+  <!--<li class="main__list" *ngIf="!items.lenght">
+    Задач нет, придумайте их!
+  </li>-->
 </ul>

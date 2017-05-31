@@ -1,24 +1,4 @@
-.list__todo{
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  align-content: stretch;
-}
-.todos__task{
-  list-style: none;
-  display: flex;
-  justify-content: flex-start;
-  align-items: stretch;
-  /*padding: .25em 0;*/
-  background: white;
-  border: 1px solid lightgray;
-  border-top: none;
-}
-.todos__task:last-child{
-  border-radius: 0 0 .5em .5em;
-}
-.todos__task .checkbox{
+:host .checkbox{
   font-size: 1em;
   align-self: center;
   width: 5%;
@@ -26,7 +6,7 @@
   color: gray;
   
 }
-.todos__task .checkbox:hover{
+:host .checkbox:hover{
   color: gray;
 }
 .task__title{
@@ -50,16 +30,18 @@
 .task__interaction > *{
   font-size: 1.2em;
   color: rgb(71, 72, 73);
-  transition: all .25s ease;
+  transition: all .25s ease; 
+  width: calc(100%/3);
+  text-align: center
 }
 .task__interaction > *:hover{
   color: gray;
 }
 .task__interaction > *:first-child{
   border-right: 1px solid lightgray;
-  margin-left: 15%;
+  /*margin-left: 15%;*/
 }
 .task__interaction > *:last-child{
   border-left: 1px solid lightgray;
-  margin-right: 15%;
+  /*margin-right: 15%;*/
 }

@@ -14,7 +14,9 @@ var todo_tasks_component_1 = require("./todo-tasks/todo-tasks.component");
 var todo_items_form_component_1 = require("./todo-items-form/todo-items-form.component");
 var platform_browser_1 = require("@angular/platform-browser");
 var forms_1 = require("@angular/forms");
+var http_1 = require("@angular/http");
 var data_service_1 = require("./shared/data.service");
+var http_service_1 = require("./shared/http.service");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -22,9 +24,9 @@ var AppModule = (function () {
 }());
 AppModule = __decorate([
     core_1.NgModule({
-        imports: [platform_browser_1.BrowserModule, forms_1.FormsModule],
+        imports: [platform_browser_1.BrowserModule, forms_1.FormsModule, http_1.HttpModule],
         declarations: [app_component_1.AppComponent, todo_form_component_1.TodoFormComponent, todo_items_component_1.TodoItemsComponent, todo_tasks_component_1.TodoTasksComponent, todo_items_form_component_1.TodoItemsFormComponent],
-        providers: [data_service_1.DataService],
+        providers: [data_service_1.DataService, http_service_1.HttpService],
         bootstrap: [app_component_1.AppComponent]
     })
 ], AppModule);

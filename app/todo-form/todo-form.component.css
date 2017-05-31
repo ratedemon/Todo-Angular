@@ -42,7 +42,7 @@
 .form__action{
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
   align-content: stretch;
   font-size: 1.2em;
 }

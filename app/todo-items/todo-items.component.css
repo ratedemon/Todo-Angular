@@ -5,7 +5,7 @@
   justify-content: space-between;
   align-items: stretch;
   width: 60%;
-  margin-bottom: 5%;
+  margin-bottom: 2.5%;
   animation: born .4s ease;
 }
 .list__head{
@@ -28,12 +28,18 @@
   font-size: 1.2em;
   color: white;
   font-weight: 400;
-  flex: 1;
+  /*flex: 1;*/
+  width: 90%;
 }
 .material-icons{
   cursor: pointer;
   font-size: 1.3em;
   transition: all .4s ease;
+  width: 3%;
+  text-align: center;
+}
+.material-icons:first-child{
+  width: 4%;
 }
 .rewrite, .delete{
   color: lightgray;
@@ -47,59 +53,16 @@
 .date:hover{
   color: gray;
 }
-.list__form{
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  align-content: stretch;
-  background: lightgray;
-  padding: .15em .2em .15em 0;
-}
-.list__form .material-icons{
-  color: forestgreen;
-  font-weight: bold;
-  font-size: 2em;
-  cursor: default;
-  width: 5%;
-}
-.list__form .form__input{
-  font-size: 1em;
-  padding: 0.1em .2em;
-  /*flex: 1;*/
-  width: 80%;
-  border: 1px solid white;
-}
-.list__form .form__submit{
-  font-size: 1em;
-  padding: .1em .4em;
-  border-radius: 0 .3em .3em 0;
-  background: #359942;
-  border: 1px solid green;
-  color: white;
-  font-weight: 500;
-  cursor: pointer;
-  width: 15%;
-  transition: all .25s ease;
-}
-.list__form .form__submit:focus,.list__form .form__submit:hover{
-  outline: none;
-  background: #44c455;
-}
-
-
-/*Task List*/
 .list__todo{
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  align-content: stretch;
+  align-content: stretch;  
 }
 .todos__task{
   list-style: none;
-  display: flex;
-  justify-content: flex-start;
-  align-items: stretch;
+  width: 100%;
   /*padding: .25em 0;*/
   background: white;
   border: 1px solid lightgray;
@@ -108,51 +71,15 @@
 .todos__task:last-child{
   border-radius: 0 0 .5em .5em;
 }
-.todos__task .checkbox{
-  font-size: 1em;
-  align-self: center;
-  width: 5%;
-  text-align: center;
-  color: gray;
-  
-}
-.todos__task .checkbox:hover{
-  color: gray;
-}
-.task__title{
-  /*flex: 1;*/
-  width: 79.5%;
-  background: transparent;
-  border: none;
-  padding: .3em 0 .3em .2em;
-  border-left: 1px solid pink;
-}
-.done{
-  text-decoration: line-through;
-}
-.task__interaction{
-  width: 15.5%;
+todo-task{
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-left: 1px solid lightgray;
+  justify-content: flex-start;
+  align-items: stretch;
+  width: 100%;
 }
-.task__interaction > *{
-  font-size: 1.2em;
-  color: rgb(71, 72, 73);
-  transition: all .25s ease;
-}
-.task__interaction > *:hover{
-  color: gray;
-}
-.task__interaction > *:first-child{
-  border-right: 1px solid lightgray;
-  margin-left: 15%;
-}
-.task__interaction > *:last-child{
-  border-left: 1px solid lightgray;
-  margin-right: 15%;
-}
+
+/*Task List*/
+
 @keyframes born{
   from{
     opacity: 0;

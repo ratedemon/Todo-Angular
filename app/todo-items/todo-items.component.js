@@ -11,11 +11,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var data_service_1 = require("../shared/data.service");
-var task_1 = require("../shared/task");
 var TodoItemsComponent = (function () {
     function TodoItemsComponent(dataService) {
         this.dataService = dataService;
         this.items = [];
+        this.el = false;
     }
     TodoItemsComponent.prototype.ngOnInit = function () {
         this.items = this.dataService.getItems();
@@ -23,12 +23,13 @@ var TodoItemsComponent = (function () {
     TodoItemsComponent.prototype.onRemove = function (todo) {
         this.dataService.removeItem(todo);
     };
-    TodoItemsComponent.prototype.addTask = function (task, input, item) {
-        var name = new task_1.Task(task);
-        var indexTodo = this.items.indexOf(item);
-        // console.log(indexTodo);
-        this.dataService.addTask(indexTodo, name);
-        input.value = null;
+    TodoItemsComponent.prototype.onRewrite = function (todo, title) {
+        this.el = !this.el;
+        if (this.el) {
+        }
+        else {
+            this.dataService.rewriteItem(todo, title.value);
+        }
     };
     return TodoItemsComponent;
 }());

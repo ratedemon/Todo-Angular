@@ -10,9 +10,6 @@ import {TodoItemsComponent} from './todo-items/todo-items.component';
 export class AppComponent{
   // items: Item[] = [];
   title1: string = "simple todo list";
-  title2: string = "from ruby garage"; 
-  // constructor(private dataservice: DataService){}
-  // ngOnInit(){
-    // this.items = this.dataservice.getItems();
-  // }
+  title2: string = "from ruby garage";
+  
 }

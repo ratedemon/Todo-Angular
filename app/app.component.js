@@ -12,10 +12,6 @@ var AppComponent = (function () {
         // items: Item[] = [];
         this.title1 = "simple todo list";
         this.title2 = "from ruby garage";
-        // constructor(private dataservice: DataService){}
-        // ngOnInit(){
-        // this.items = this.dataservice.getItems();
-        // }
     }
     return AppComponent;
 }());

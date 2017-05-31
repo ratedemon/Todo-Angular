@@ -12,6 +12,7 @@
   font-size: 2em;
   cursor: default;
   width: 5%;
+  text-align: center;
 }
 .list__form .form__input{
   font-size: 1em;

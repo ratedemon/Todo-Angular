@@ -20,7 +20,7 @@ button{
   align-items: center;
   flex-direction: column;
 }
-.container-fluid, app{
+app{
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -49,6 +49,9 @@ todo-item, todo-form{
   display: flex;
   justify-content: center;
   align-items: center
+}
+todo-item{
+  flex: 1;
 }
 .material-icons{
   cursor: pointer;

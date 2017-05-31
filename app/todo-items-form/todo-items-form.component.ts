@@ -17,7 +17,7 @@ export class TodoItemsFormComponent{
   addTask(task: string, input: HTMLInputElement){
     let name = new Task(task);
     let indexTodo = this.items.indexOf(this.item);
-    console.log(indexTodo, this.item);
+    // console.log(indexTodo, this.item);
     this.dataService.addTask(indexTodo, name);
     input.value = null;
   }

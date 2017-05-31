@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, Input} from '@angular/core';
 import {NgForm, NgModel} from '@angular/forms';
 import {DataService} from '../shared/data.service';
 import {Item} from '../shared/item';
@@ -10,7 +10,7 @@ import {Item} from '../shared/item';
   styleUrls: ["./todo-form.component.css"]
 })
 export class TodoFormComponent implements OnInit{
-  items: Item[] = []
+  items: Item[] = [];
   private showing = false;
   constructor(private dataService: DataService){}
   show(){
