@@ -6,13 +6,17 @@ import {Response} from '@angular/http';
 
 @Injectable()
 export class DataService{
-  public items: Item[] = [{title: 'LLL', arrayTasks: [{text: "GO to Shop", done: false},{text: "Buy beer", done: true}]},{title: 'Privet', arrayTasks: [{text: "GSHipp", done: false},{text: "Bbeer", done: false}]}];
-  // public items: Item[] = [];
+  // public items: Item[] = [{title: 'LLL', arrayTasks: [{text: "GO to Shop", done: false},{text: "Buy beer", done: true}]},{title: 'Privet', arrayTasks: [{text: "GSHipp", done: false},{text: "Bbeer", done: false}]}];
+  public items: Item[] = [];
   constructor(private httpService: HttpService){}
-  getItems(){
-    // this.httpService.getData().subscribe(
-    //   (data:Response)=>{this.items=data.json();console.log(this.items)});
-    return this.items;
+  getItems(arr){
+    // this.httpService.getData().subscribe(data=>this.items=data);
+    // // return this.items;
+    // let t = setTimeout(()=>{
+    //   console.log(this.items);
+    //   return this.items;
+    // }, 1000);
+    this.items = arr;
   }
   addItems(name: string, array: Task[]){
     this.items.push(new Item(name, array));

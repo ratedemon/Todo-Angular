@@ -10,14 +10,14 @@ import {Item} from '../shared/item';
   styleUrls: ["./todo-form.component.css"]
 })
 export class TodoFormComponent implements OnInit{
-  items: Item[] = [];
+  @Input() items: Item[];
   private showing = false;
   constructor(private dataService: DataService){}
   show(){
     this.showing = !this.showing;
   }
   ngOnInit(){
-    this.items = this.dataService.getItems();
+    // this.items = this.dataService.getItems();
   }
   addTitle(name: string, input: HTMLInputElement){
     const variable = new Item(name, []);

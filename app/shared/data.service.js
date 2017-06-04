@@ -13,15 +13,19 @@ var item_1 = require("./item");
 var http_service_1 = require("./http.service");
 var core_1 = require("@angular/core");
 var DataService = (function () {
-    // public items: Item[] = [];
     function DataService(httpService) {
         this.httpService = httpService;
-        this.items = [{ title: 'LLL', arrayTasks: [{ text: "GO to Shop", done: false }, { text: "Buy beer", done: true }] }, { title: 'Privet', arrayTasks: [{ text: "GSHipp", done: false }, { text: "Bbeer", done: false }] }];
+        // public items: Item[] = [{title: 'LLL', arrayTasks: [{text: "GO to Shop", done: false},{text: "Buy beer", done: true}]},{title: 'Privet', arrayTasks: [{text: "GSHipp", done: false},{text: "Bbeer", done: false}]}];
+        this.items = [];
     }
-    DataService.prototype.getItems = function () {
-        // this.httpService.getData().subscribe(
-        //   (data:Response)=>{this.items=data.json();console.log(this.items)});
-        return this.items;
+    DataService.prototype.getItems = function (arr) {
+        // this.httpService.getData().subscribe(data=>this.items=data);
+        // // return this.items;
+        // let t = setTimeout(()=>{
+        //   console.log(this.items);
+        //   return this.items;
+        // }, 1000);
+        this.items = arr;
     };
     DataService.prototype.addItems = function (name, array) {
         this.items.push(new item_1.Item(name, array));

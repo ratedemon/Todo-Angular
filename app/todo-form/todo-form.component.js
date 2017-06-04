@@ -15,14 +15,13 @@ var item_1 = require("../shared/item");
 var TodoFormComponent = (function () {
     function TodoFormComponent(dataService) {
         this.dataService = dataService;
-        this.items = [];
         this.showing = false;
     }
     TodoFormComponent.prototype.show = function () {
         this.showing = !this.showing;
     };
     TodoFormComponent.prototype.ngOnInit = function () {
-        this.items = this.dataService.getItems();
+        // this.items = this.dataService.getItems();
     };
     TodoFormComponent.prototype.addTitle = function (name, input) {
         var variable = new item_1.Item(name, []);
@@ -32,6 +31,10 @@ var TodoFormComponent = (function () {
     };
     return TodoFormComponent;
 }());
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Array)
+], TodoFormComponent.prototype, "items", void 0);
 TodoFormComponent = __decorate([
     core_1.Component({
         moduleId: module.id,

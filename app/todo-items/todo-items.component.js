@@ -14,11 +14,11 @@ var data_service_1 = require("../shared/data.service");
 var TodoItemsComponent = (function () {
     function TodoItemsComponent(dataService) {
         this.dataService = dataService;
-        this.items = [];
         this.el = false;
     }
     TodoItemsComponent.prototype.ngOnInit = function () {
-        this.items = this.dataService.getItems();
+        // this.items = this.dataService.getItems();
+        console.log(this.items);
     };
     TodoItemsComponent.prototype.onRemove = function (todo) {
         this.dataService.removeItem(todo);
@@ -33,6 +33,10 @@ var TodoItemsComponent = (function () {
     };
     return TodoItemsComponent;
 }());
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Array)
+], TodoItemsComponent.prototype, "items", void 0);
 TodoItemsComponent = __decorate([
     core_1.Component({
         moduleId: module.id,

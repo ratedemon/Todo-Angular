@@ -13,17 +13,17 @@ export class HttpService{
   constructor(private http: Http){}
   getData(){
     return this.http.get('todos.json')
-    // .map((resp:Response)=>{
-    //   let list = resp.json();
-    //   let todos: Item[] = [];
-    //   for(let index in list){
-    //     let todo = list[index];
-    //     // console.log(todo);
-    //     todos.push(todo);
-    //   }
-    //   console.log(todos);
-    //   return todos;
-    // })
+    .map((resp:Response)=>{
+      let list = resp.json();
+      let todos: Item[] = [];
+      for(let index in list){
+        let todo = list[index];
+        // console.log(todo);
+        todos.push(todo);
+      }
+      // console.log(todos);
+      return todos;
+    })
   }
   // getData(){
   //   return this.http.get('todos.json');
