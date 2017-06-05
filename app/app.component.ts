@@ -20,6 +20,7 @@ export class AppComponent implements OnInit, AfterViewChecked{
   }
   ngAfterViewChecked(){
     this.dataService.getItems(this.items);
-    console.log(this.items);
+    // console.log(this.items);
   }
+
 }

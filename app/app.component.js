@@ -26,7 +26,7 @@ var AppComponent = (function () {
     };
     AppComponent.prototype.ngAfterViewChecked = function () {
         this.dataService.getItems(this.items);
-        console.log(this.items);
+        // console.log(this.items);
     };
     return AppComponent;
 }());

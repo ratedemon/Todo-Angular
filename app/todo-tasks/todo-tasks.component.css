@@ -4,10 +4,9 @@
   width: 5%;
   text-align: center;
   color: gray;
-  
 }
 :host .checkbox:hover{
-  color: gray;
+  color: darkgray;
 }
 .task__title{
   /*flex: 1;*/
